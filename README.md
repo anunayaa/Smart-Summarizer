@@ -20,7 +20,7 @@ Truncation/padding of inputs (512 tokens) and summaries (128 tokens).
 
 Removal of null/duplicate records.
 
-⚙️ Methodology
+Methodology
 
 Data Preprocessing
 
@@ -33,7 +33,7 @@ Fine-tuned BART model using Hugging Face transformers.
 Training executed on GPU-enabled Colab with reduced dataset size.
 
 
-🖥️ How to Run
+How to Run
 Prerequisites
 
 Install dependencies:
@@ -52,7 +52,7 @@ inputs = tokenizer([text], max_length=512, truncation=True, return_tensors="pt")
 summary_ids = model.generate(inputs["input_ids"], max_length=128, min_length=30, length_penalty=2.0)
 print(tokenizer.decode(summary_ids[0], skip_special_tokens=True))
 
-📊 Results & Achievements
+Results & Achievements
 
 Successfully implemented and fine-tuned BART for abstractive summarization.
 
@@ -62,7 +62,7 @@ Built a full pipeline: preprocessing → training → evaluation → inference.
 
 Demonstrated summarization on real-world articles.
 
-🔮 Future Enhancements
+Future Enhancements
 
 Train on the full 44k+ dataset for better generalization.
 
@@ -72,7 +72,7 @@ Deploy as a web application or REST API.
 
 Add ROUGE evaluation and human feedback mechanisms.
 
-- Author
+Author
 
-- Anunaya R Pillai
+Anunaya R Pillai
 
